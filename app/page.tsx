@@ -4,7 +4,7 @@ export default function Home() {
   const handleLogin = () => {
     const clientId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID;
     const redirectUri = 'http://localhost:3000/callback';
-    const scope = 'instagram_basic,instagram_manage_messages,pages_show_list';
+    const scope = 'instagram_basic,instagram_manage_messages,pages_show_list,pages_messaging,pages_manage_metadata,pages_read_engagement';
     const authUrl = `https://www.facebook.com/v18.0/dialog/oauth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${scope}&response_type=code`;
     window.location.href = authUrl;
   };
